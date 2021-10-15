@@ -25,7 +25,8 @@ function updatePosition(direction, position) {
 	
 	setTimeout(function (){
 		
-		contentElem.style.left = position + 'px'
+	contentElem.style.left = position + 'px'
+	
 	switch(direction) {
 		case 'right': 
 			newPosition = position + 1
@@ -37,16 +38,7 @@ function updatePosition(direction, position) {
 				updatePosition(direction, -contentElem.offsetWidth)
 			}
 		break
-		/* if (direction == 'right') {
-			newPosition = position + 1
-		
-			if (newPosition < containerElem.offsetWidth) {
-				updatePosition(direction, newPosition)
-			} 
-			else {
-				updatePosition(direction, -contentElem.offsetWidth)
-			}	 */
-	/* 	} */
+
 	
 		case 'left':
 			newPosition = position - 1
@@ -58,16 +50,7 @@ function updatePosition(direction, position) {
 			}
 		break	
 	}
-		/* if (direction == 'left') {
-			newPosition = position - 1
-			if (newPosition > -contentElem.offsetWidth) {
-				updatePosition(direction, newPosition)
-			} 
-			else {
-				updatePosition(direction, containerElem.offsetWidth)
-			} */
-	/* 	} */
-		
+	
 	}, 4)
 
 }
