@@ -1,0 +1,140 @@
+html, body {
+	height: 100%;
+	margin: 0;
+}
+
+ul, h1 {
+	margin: 0;
+	list-style-type: none;
+	font-family: calibri;
+	font-size: 14pt;
+	padding: 20px;
+	}
+   
+a {
+	color: #350c40;
+	text-decoration: none;
+	} 
+
+a:hover {
+    /* animation: test 1s linear 1; */
+	transition: 1s;
+	color: #f87a09;
+    text-shadow: red 0 0 10px;
+	   }
+	   
+/* @keyframes test {
+  0% {
+   color: #350c40;
+  }
+  100% {
+    color: #f87a09;
+    text-shadow: red 0 0 10px;
+  }
+}	   */ 
+
+.header {
+	text-align: center;
+	height: 150px;
+	padding-top: 50px;
+	background-image: url(images/dxm-bar.jpg);
+	}
+
+.header h1 {
+	font-size: 50pt;
+	font-family: calibri;
+	color: #130e4e;
+	
+}
+
+body {
+	background: #eee; 
+	background-image: url(images/stars.jpg);
+	background-attachment: fixed;
+}
+
+.container {
+	position: relative; 
+	margin: 0 auto;
+	max-width: 1200px;
+	padding: 0 20px;
+	background: #ede8f3;
+}
+
+.layout {
+ max-width: 1200px; margin: auto;
+ position: relative; /* Относительное позиционирование */ 
+}
+.sidebar { position: fixed; }
+.sidebar {
+ background: #e7d8f7; /* Цвет фона */
+ width: 180px; /* Ширина колонки */
+}
+.content {
+ background: #ede1f3; /* Цвет фона */
+ padding: 40px;
+ left: 200px; /* Сдвиг вправо */
+ max-width: 900px; /* Ширина колонки */
+ font-size: 16pt;
+ font-family: calibri;
+ margin-left: auto;
+ overflow: auto;
+}
+
+ul.hr li {
+position: relative;
+left: 180px;
+display: inline;
+background: #e7d8f7;
+margin-right: 50px; /* Отступ слева */
+padding: 3px; /* Поля вокруг текста */
+}
+
+.fig1 {
+    text-align: center; 
+    margin: 0; 
+    height: 100%; 
+    background: #eee url(images/bg1.jpg);
+    background-size: cover; 
+	animation: test 2s;
+    } 
+	
+@keyframes test {
+  0% {
+   opacity: 0.1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fig2 {
+    text-align: center; 
+    margin: 0; 
+    height: 100%; 
+    background: #eee url(images/bg2.jpg);
+    background-size: cover; 
+    }
+	
+.fig3 {
+    text-align: center; 
+    margin: 0; 
+    height: 100%; 
+    background: #eee url(images/bg4.jpeg);
+    background-size: cover; 
+    } 	
+
+.portal {
+	background: #e7d8f7;
+	height: 20px;
+	margin: 0;
+}
+#running-line-content {
+/*	position: relative; */
+	left: 100px;
+	}
+	
+#running-line-container {
+	border: 1px solid black;
+/*	overflow: hidden; */
+}
