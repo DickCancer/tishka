@@ -8,14 +8,8 @@ function logger(stringToLog) {
 	console.log(new Date +': '+(stringToLog || 'default value')) 
 }
 
-function startRunningLine() {
+function startRunningKot() {
 	
-	if (containerElem.classList.contains('direction-left')) {
-		updatePosition('left', -contentElem.offsetWidth)
-	}
-	if (containerElem.classList.contains('direction-right')) {
-		updatePosition('right', containerElem.offsetWidth) 
-	}
 	if (containerElem.classList.contains('direction-up')) {
 		
 		updatePosition('up', -contentElem.offsetHeight)
@@ -26,43 +20,14 @@ function startRunningLine() {
 }
 
 function updatePosition(direction, position) {
-	const speed = 1
+	const speed = 5
 	let newPosition 
 	
 	setTimeout(function (){
 		
-	if(direction == 'left' || direction == 'right') {	
-	contentElem.style.left = position + 'px'
-	}
-	
-	if(direction == 'up' || direction == 'down') {	
 	contentElem.style.top = position + 'px'
-	}
 	
 	switch(direction) {
-		case 'right': 
-			newPosition = position + speed
-		
-			if (newPosition < containerElem.offsetWidth) {
-				updatePosition(direction, newPosition)
-			} 
-			else {
-				updatePosition(direction, -contentElem.offsetWidth)
-			}
-		break
-
-	
-		case 'left':
-			newPosition = position - speed
-			if (newPosition > -contentElem.offsetWidth) {
-				updatePosition(direction, newPosition)
-			} 
-			else {
-				updatePosition(direction, containerElem.offsetWidth)
-			}
-		break	
-	
-		
 		case 'down': 
 			newPosition = position + speed
 		
@@ -90,7 +55,7 @@ function updatePosition(direction, position) {
 
 }
 
-startRunningLine()
+startRunningKot()
 
 
 
